@@ -27,6 +27,13 @@ Download the udev rules from Teensy's website:
 and copy the file to /etc/udev/rules.d :
 
     sudo cp 00-teensy.rules /etc/udev/rules.d/
+    
+Or for Pico    
+    curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/master/scripts/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
+    sudo service udev restart
+    sudo usermod -a -G dialout $USER
+    sudo usermod -a -G plugdev $USER
+    [Pico notes](https://gist.github.com/Redstone-RM/0ca459c32ec5ead8700284ff56a136f7)
 
 ### 5. Install Screen Terminal
 
