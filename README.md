@@ -28,7 +28,8 @@ and copy the file to /etc/udev/rules.d :
 
     sudo cp 00-teensy.rules /etc/udev/rules.d/
     
-### 4.1 Aternate Pico uDev   
+### 4.1 Aternate Pico install (in progress)
+    sudo apt-get -y install ament-cmake
 
     curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/master/scripts/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
     
@@ -38,8 +39,7 @@ and copy the file to /etc/udev/rules.d :
     
     sudo usermod -a -G plugdev $USER
     
-    [Pico notes](https://gist.github.com/Redstone-RM/0ca459c32ec5ead8700284ff56a136f7)
-
+    
 ### 5. Install Screen Terminal
 
     sudo apt install screen
