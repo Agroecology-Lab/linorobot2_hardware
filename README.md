@@ -19,7 +19,7 @@ Add platformio to your $PATH:
     echo "PATH=\"\$PATH:\$HOME/.platformio/penv/bin\"" >> $HOME/.bashrc
     source $HOME/.bashrc
 
-### 4. UDEV Rule
+### 4. UDEV Rule for Teensy
 Download the udev rules from Teensy's website:
 
     wget https://www.pjrc.com/teensy/00-teensy.rules
@@ -28,7 +28,8 @@ and copy the file to /etc/udev/rules.d :
 
     sudo cp 00-teensy.rules /etc/udev/rules.d/
     
-Aternate Pico uDev   
+### 4.1 Aternate Pico uDev   
+
     curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/master/scripts/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
     
     sudo service udev restart
