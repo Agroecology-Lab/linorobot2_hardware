@@ -30,6 +30,7 @@ and copy the file to /etc/udev/rules.d :
     
 ### 4.1 Aternate Pico install (in progress)
     sudo apt-get -y install ament-cmake
+    pio pkg install --library "arduino-libraries/Servo@^1.1.8"
 
     curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/master/scripts/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
     
